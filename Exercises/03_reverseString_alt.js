@@ -1,4 +1,3 @@
 let reverseText = function(inputString){
-    let inputString = "";
-    
+    return inputString.split("").reverse().join("");
 }
