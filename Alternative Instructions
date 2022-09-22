@@ -1,1 +1,7 @@
 I tried for 2 days to get the test environment working, something seems off with it, so I'm just gonna do them through a local hosted website html/js file. 
+It works! Can't test using jest like TOP says, but Jest isn't working, so I have to rely on the spec.js files for expected test results 
+--------------------------------------------------------
+To use this, go in the Exercises folder. Open the Javascript_Exercises_Alt.html file in VSCode, and launch the locally hosted browser via the extension
+For each exercise you want to test, copy the name of the .js file of the exercise to the <script src = ##_fileName.js> element of the html file
+If you're editing/testing code, use the in-browser terminal
+Test against the expected rules/results of the numbered exercise's spec.js file, located in javascript-exercises/TOP-javascript-exercises
