@@ -8,3 +8,4 @@ const removeFromArray = function x(givenArray, removedArray, removedString){
     while (givenArray.includes()!= removedArray && removedString);
     return givenArray;
     }
+//UNFINISHED
