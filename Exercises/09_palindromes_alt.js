@@ -1,5 +1,5 @@
 const isPalindrome = function isPalindrome(readLtoR){
-    let punctuation = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
+    let punctuation = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ ]/g;
     readLtoR = readLtoR.toLowerCase();
     readLtoR = readLtoR.replace(punctuation, "");
     readRtoL = readLtoR.split("").reverse().join("");
