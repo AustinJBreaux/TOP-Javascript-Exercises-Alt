@@ -1,4 +1,4 @@
-const people = [ //Test 1
+const people1 = [ //Test 1
     {
       name: "Carly",
       yearOfBirth: 1942,
@@ -16,7 +16,7 @@ const people = [ //Test 1
     },
 ]
 
-const people = [ //Test 2
+const people2 = [ //Test 2
     {
       name: "Carly",
       yearOfBirth: 2018,
@@ -33,7 +33,7 @@ const people = [ //Test 2
     },
   ]
 
-  const people = [ //Test 3
+  const people3 = [ //Test 3
     {
       name: "Carly",
       yearOfBirth: 1066,

@@ -8,7 +8,7 @@ const books = [
       author: 'Name2'
     }
 ]
-let result = books.map(book => book.title);
-let getTitle = function title(result){
-    return result;
+
+const getTitle = function getTitle(){
+  return books.map(title)
 }
