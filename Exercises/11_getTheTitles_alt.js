@@ -9,6 +9,10 @@ const books = [
     }
 ]
 
-const getTitle = function getTitle(){
-  return books.map(title)
+let getTitle = function getTitle(){
+  return books.map(makeArray);
+}
+function makeArray(returnedTitles){
+  let {title} = returnedTitles;
+  return {title};
 }
