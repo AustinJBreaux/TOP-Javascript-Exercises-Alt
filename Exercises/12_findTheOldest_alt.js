@@ -33,6 +33,7 @@ const people2 = [ //Test 2
     {
       name: "Carly",
       yearOfBirth: 2018,
+      yearOfDeath: 2022, //TEMPORARY FOR DEBUGGING
     },
     {
       name: "Ray",
@@ -55,36 +56,38 @@ Get greatest, return index number of greatest through callback
 Use that index to return name
 */
 const test2 = function test2(){
-  function getDifference(difference){
-    difference = people2.yearOfDeath - people2.yearOfBirth;
+  function getDifference(){
+    people2.yearOfDeath - people2.yearOfBirth;
   }
-  function iterateDifference(oldestIndex){
-    mapArray = people2.map(getDifference);
-    maxArray = Math.max(mapArray);
-    oldestIndex = mapArray.indexOf(maxArray);
+  function iterateDifference(){
+    differenceArray = people2.map(getDifference);
+    maxArray = Math.max(differenceArray);
+    oldestIndexArr = differenceArray.indexOf(maxArray);
+
+    console.log(differenceArray);
+    console.log("max"+maxArray);
+    console.log("oldest"+oldestIndexArr);
   }
-  function returnOldest(){
+  iterateDifference();
+  /* function returnOldest(oldestIndexArr){
     iterateDifference();
-    return people2[oldestIndex].name;
+    oldestIndexNum = [];
+    oldestIndexArr.forEach(str => {
+      oldestIndexNum.push(Number(str));
+    });
+    return people2[oldestIndexNum].name;
   }
+  if(people2[0,1,2].yearOfDeath === undefined){
+    people2.forEach(yearOfDeath=> {yearOfDeath ??= 2022;
+    returnOldest();
+    });
+  }
+  else returnOldest();*/
+}
   // pseudo: if any object in the array's yOD is undefined, let yOD = 2022.
     // then return returnOldest
   // pseudo: else return returnOldest
-  }
-  difference1 = people1[0].yearOfDeath - people1[0].yearOfBirth;
-  difference2 = people1[1].yearOfDeath - people1[1].yearOfBirth;
-  difference3 = people1[2].yearOfDeath - people1[2].yearOfBirth;
-  if(difference1 > difference2 && difference3){
-    return people1[0].name;
-  }
-  else if(difference2 > difference1 && difference3){
-    return people1[1].name
-  }
-  else if(difference3 > difference1 && difference20){
-    return people1[2].name;
-  }
-}
-  const people3 = [ //Test 3
+const people3 = [ //Test 3
     {
       name: "Carly",
       yearOfBirth: 1066,
