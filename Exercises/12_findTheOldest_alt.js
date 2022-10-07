@@ -57,16 +57,16 @@ Use that index to return name
 */
 const test2 = function test2(){
   function getDifference(){
-    people2.yearOfDeath - people2.yearOfBirth;
+    difference = people2.yearOfDeath - people2.yearOfBirth;
+    differenceArray.push(difference);
   }
   function iterateDifference(){
-    differenceArray = people2.map(getDifference);
-    maxArray = Math.max(differenceArray);
-    oldestIndexArr = differenceArray.indexOf(maxArray);
-
-    console.log(differenceArray);
-    console.log("max"+maxArray);
+    differenceArray = [];
+    people2.forEach(getDifference);
+    /*maxArray = Math.max(differenceArray);console.log("max"+maxArray);
     console.log("oldest"+oldestIndexArr);
+    oldestIndexArr = differenceArray.indexOf(maxArray);*/
+    console.log(differenceArray);
   }
   iterateDifference();
   /* function returnOldest(oldestIndexArr){
