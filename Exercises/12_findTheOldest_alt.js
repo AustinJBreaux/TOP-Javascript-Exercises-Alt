@@ -56,18 +56,17 @@ Get greatest, return index number of greatest through callback
 Use that index to return name
 */
 const test2 = function test2(){
-  function getDifference(){
-    difference = people2.yearOfDeath - people2.yearOfBirth;
-    differenceArray.push(difference);
-  }
   function iterateDifference(){
     differenceArray = [];
-    people2.forEach(getDifference);
+    arrayLength = people2.length;
+    for(let i = 0; i < arrayLength; i++){
+      differenceArray.push(people2[i].yearOfDeath - people2[i].yearOfBirth)
+    }
+  console.log(differenceArray);  
+ }
     /*maxArray = Math.max(differenceArray);console.log("max"+maxArray);
     console.log("oldest"+oldestIndexArr);
     oldestIndexArr = differenceArray.indexOf(maxArray);*/
-    console.log(differenceArray);
-  }
   iterateDifference();
   /* function returnOldest(oldestIndexArr){
     iterateDifference();
