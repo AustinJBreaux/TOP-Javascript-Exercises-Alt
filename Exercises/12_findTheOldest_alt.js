@@ -62,11 +62,11 @@ const test2 = function test2(){
     for(let i = 0; i < arrayLength; i++){
       differenceArray.push(people2[i].yearOfDeath - people2[i].yearOfBirth)
     }
-  console.log(differenceArray);  
- }
-    /*maxArray = Math.max(differenceArray);console.log("max"+maxArray);
-    console.log("oldest"+oldestIndexArr);
-    oldestIndexArr = differenceArray.indexOf(maxArray);*/
+    maxArray = Math.max(... differenceArray);
+    console.log("max: "+maxArray); 
+    oldestIndexArr = differenceArray.indexOf(maxArray);
+    console.log("oldest: "+oldestIndexArr);
+  }
   iterateDifference();
   /* function returnOldest(oldestIndexArr){
     iterateDifference();
