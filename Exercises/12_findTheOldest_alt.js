@@ -75,7 +75,6 @@ const test2 = function test2(){
   }
 }
 const people3 = [ //Test 3
-// Pseudo: I'm gonna try just reusing test 2, but inserting number 3
     {
       name: "Carly",
       yearOfBirth: 1066,
@@ -119,3 +118,4 @@ const people3 = [ //Test 3
      console.log(people3[oldestAgeIndex].name);
    }
  }
+//
