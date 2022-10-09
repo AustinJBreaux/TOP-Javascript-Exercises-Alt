@@ -33,7 +33,6 @@ const people2 = [ //Test 2
     {
       name: "Carly",
       yearOfBirth: 2018,
-      yearOfDeath: 2022, //TEMPORARY FOR DEBUGGING
     },
     {
       name: "Ray",
@@ -56,32 +55,32 @@ Get greatest, return index number of greatest through callback
 Use that index to return name
 */
 const test2 = function test2(){
+   start();
+  function start(){
+    if (people2.yearOfDeath === undefined){
+      let arrayLength = people2.length;
+      for(let i = 0; i < arrayLength; i++){
+        if (people2[i].yearOfDeath === undefined){
+          people2[i].yearOfDeath = 2022;
+        }
+      }
+      returnOldest();
+  }
+    else returnOldest();
+  }
   function iterateDifference(){
     differenceArray = [];
     arrayLength = people2.length;
     for(let i = 0; i < arrayLength; i++){
       differenceArray.push(people2[i].yearOfDeath - people2[i].yearOfBirth)
     }
-    maxArray = Math.max(... differenceArray);
-    console.log("max: "+maxArray); 
-    oldestIndexArr = differenceArray.indexOf(maxArray);
-    console.log("oldest: "+oldestIndexArr);
   }
-  iterateDifference();
-  /* function returnOldest(oldestIndexArr){
-    iterateDifference();
-    oldestIndexNum = [];
-    oldestIndexArr.forEach(str => {
-      oldestIndexNum.push(Number(str));
-    });
-    return people2[oldestIndexNum].name;
+  function returnOldest(){
+    iterateDifference();    
+    maxAge = Math.max(... differenceArray);
+    oldestAgeIndex = differenceArray.indexOf(maxAge);
+    return people2[oldestAgeIndex].name;
   }
-  if(people2[0,1,2].yearOfDeath === undefined){
-    people2.forEach(yearOfDeath=> {yearOfDeath ??= 2022;
-    returnOldest();
-    });
-  }
-  else returnOldest();*/
 }
   // pseudo: if any object in the array's yOD is undefined, let yOD = 2022.
     // then return returnOldest
