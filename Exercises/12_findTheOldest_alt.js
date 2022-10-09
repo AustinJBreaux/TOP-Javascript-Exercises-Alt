@@ -45,15 +45,7 @@ const people2 = [ //Test 2
       yearOfDeath: 1941,
     },
   ]
-/*
-Pseudo: 
-Obj: Finds oldest even when someone is living
-Refactor ideas:
-Except when yearOfDeath === undefined, then yOD = 2022
-Difference = yOD - yOB for each? Find something that iterates arrays
-Get greatest, return index number of greatest through callback
-Use that index to return name
-*/
+
 const test2 = function test2(){
    start();
   function start(){
@@ -79,13 +71,11 @@ const test2 = function test2(){
     iterateDifference();    
     maxAge = Math.max(... differenceArray);
     oldestAgeIndex = differenceArray.indexOf(maxAge);
-    return people2[oldestAgeIndex].name;
+    console.log(people2[oldestAgeIndex].name);
   }
 }
-  // pseudo: if any object in the array's yOD is undefined, let yOD = 2022.
-    // then return returnOldest
-  // pseudo: else return returnOldest
 const people3 = [ //Test 3
+// Pseudo: I'm gonna try just reusing test 2, but inserting number 3
     {
       name: "Carly",
       yearOfBirth: 1066,
@@ -101,3 +91,31 @@ const people3 = [ //Test 3
       yearOfDeath: 1941,
     },
   ]
+  const test3 = function test3(){
+    start();
+   function start(){
+     if (people3.yearOfDeath === undefined){
+       let arrayLength = people3.length;
+       for(let i = 0; i < arrayLength; i++){
+         if (people3[i].yearOfDeath === undefined){
+           people3[i].yearOfDeath = 2022;
+         }
+       }
+       returnOldest();
+   }
+     else returnOldest();
+   }
+   function iterateDifference(){
+     differenceArray = [];
+     arrayLength = people3.length;
+     for(let i = 0; i < arrayLength; i++){
+       differenceArray.push(people3[i].yearOfDeath - people3[i].yearOfBirth)
+     }
+   }
+   function returnOldest(){
+     iterateDifference();    
+     maxAge = Math.max(... differenceArray);
+     oldestAgeIndex = differenceArray.indexOf(maxAge);
+     console.log(people3[oldestAgeIndex].name);
+   }
+ }
