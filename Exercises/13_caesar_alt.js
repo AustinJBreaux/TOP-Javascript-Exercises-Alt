@@ -41,67 +41,65 @@ lowercaseLetters = [
 "u", "v", "w", "x", "y", "z"];//26
 
     function start(uppercaseLetters, lowercaseLetters){
-        separateLetters = sentence.split();
-        /*separateLetters.forEach(newLetter => {
-            newSentence = [];
+        separateLetters = sentence.split('');
+        newSentence = [];
+        separateLetters.forEach((newLetter) => {
             if(newLetter.includes(uppercaseLetters)){
-                modifyUppercase();
+                modifyUppercase(newLetter);
             }
             else if(newLetter.includes(lowercaseLetters)){
-                modifyLowercase();
+                modifyLowercase(newLetter);
             }
             else newSentence.push(newLetter);
-        });*/
-        console.log(separateLetters);
-        /* modifiedSentence = newSentence.concat();
-        return modifiedSentence;
+        });
+        console.log(newSentence.join(''))
     }
 
     function modifyUppercase(){
-        index = separateLetters.indexOf(newLetter);
+        index = uppercaseLetters.indexOf(newLetter);
         if(change > 0){
             for(let i = 0; i < change; i++){
-            if(index > 26){
+            if(index > 25){
                     let index = 0;
                     index ++;
             }
                 else index++;
-        }
+            };
         newSentence.push(uppercaseLetters[index]);
         }
         else if(change < 0){
             for(let i = 0; i > change; i--){
-                if(index < -26){
+                if(index < -25){
                     let index = 0;
                     index--;
             }
             else index--;
             }
-            newSentence.push(uppercaseLetters[Math.abs(index)])
+        newSentence.push(uppercaseLetters[Math.abs(index)])
         }
     }
 
     function modifyLowercase(){
-        index = separateLetters.indexOf(newLetter);
+        index = lowercaseLetters.indexOf(newLetter);
         if(change > 0){
             for(let i = 0; i < change; i++){
-            if(index > 26){
+            if(index > 25){
                     let index = 0;
                     index ++;
             }
                 else index++;
-        }
+            }
         newSentence.push(lowercaseLetters[index]);
         }
         else if(change < 0){
             for(let i = 0; i > change; i--){
-                if(index < -26){
+                if(index < -25){
                     let index = 0;
                     index--;
             }
             else index--;
             }
-            newSentence.push(lowercaseLetters[Math.abs(index)])
-        }*/
+        newSentence.push(lowercaseLetters[Math.abs(index)])
+        }
     }
 }
